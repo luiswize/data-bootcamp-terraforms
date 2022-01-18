@@ -4,6 +4,14 @@ module "vpc" {
   project_id  = var.project_id
   
 }
+  
+terraform {
+        required_providers {
+                google = {
+                        version = "= 3.54.0"
+                }
+        }
+}
 
 module "gke" {
   source = "./modules/gke"
